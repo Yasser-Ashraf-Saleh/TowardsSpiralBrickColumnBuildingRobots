@@ -12,12 +12,12 @@ This paper explores the automation in construction,  emphasizing the novel task-
   <em>Figure 1:  Basic idea of the general framework in our approach. The manipulator is attached to a gripper and is tasked with assembling a user-deﬁned spiral brick column using incoming bricks from a belt conveyor.</em>
 <!-- <p align="center">
 </p> -->
+
 ## Proposed Approach
-We propose a multi-faceted approach involving:
+
+We detail a comprehensive framework involving building modeler, pose estimator, and task executioner components. This approach enables effective and efficient assembly of user-defined spiral brick columns using a manipulator and incoming bricks from a belt conveyor. The proposed a multi-faceted approach involving:
 
 * Spiral Brick Models: Designing computational models for various spiral configurations.
-* Pose Estimation: Developing algorithms for accurate brick positioning.
-* Task Execution Framework: Implementing a sequence of robotic actions for efficient brick placement.
 <p align="center">
 <img src="Models.JPG" width="900" height="200" />
 </p>
@@ -25,12 +25,16 @@ We propose a multi-faceted approach involving:
 <!-- <p align="center">
 </p> -->
 
+* Pose Estimation: Developing algorithms for accurate brick positioning.
 <p align="center">
 <img src="pose.JPG" width="900" height="200" />
 </p>
   <em>Figure 3:  Example of the ﬁltered point cloud of brick and its estimated pose. </em>
 <!-- <p align="center">
 </p> -->
+
+* Task Execution Framework: Implementing a sequence of robotic actions for efficient brick placement.
+
 ## Computational Experiments
 Our methodology is validated through extensive simulations, showcasing the potential of robotic systems in constructing spiral brick columns with high precision and efficiency.
 
