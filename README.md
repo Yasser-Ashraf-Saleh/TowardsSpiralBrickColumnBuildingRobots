@@ -34,20 +34,22 @@ We detail a comprehensive framework involving building modeler, pose estimator, 
 </p> -->
 
 * Task Execution Framework: Implementing a sequence of robotic actions for efficient brick placement.
-
+<p align="center">
+<img src="Figures/Task_execute.gif" />
+</p>
 ## Computational Experiments & Results
 Our simulations conducted in Matlab and CoppeliaSim environments validate the effectiveness of our approach. Performance metrics include position and orientation errors, pose estimation times, and trajectory times for assembling spiral brick columns.
 <p align="center">
 <img src="Figures/results.JPG" width="866" height="630" />
 </p>
-  <em>Figure 4:  Performance metrics in the assembly of spiral brick columns. </em>
+  <em>Figure 5:  Performance metrics in the assembly of spiral brick columns. </em>
 <!-- <p align="center">
 </p> -->
 
 <p align="center">
 <img src="Figures/simulation.JPG" width="848" height="181" />
 </p>
-  <em>Figure 5:  Examples of the performance while assembling spiral brick columns. </em>
+  <em>Figure 6:  Examples of the performance while assembling spiral brick columns. </em>
 <!-- <p align="center">
 </p> -->
 ## Conclusion
