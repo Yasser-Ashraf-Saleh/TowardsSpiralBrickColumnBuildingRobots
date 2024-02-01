@@ -35,8 +35,8 @@ We detail a comprehensive framework involving building modeler, pose estimator, 
 
 * Task Execution Framework: Implementing a sequence of robotic actions for efficient brick placement.
 
-## Computational Experiments
-Our methodology is validated through extensive simulations, showcasing the potential of robotic systems in constructing spiral brick columns with high precision and efficiency.
+## Computational Experiments & Results
+Our simulations conducted in Matlab and CoppeliaSim environments validate the effectiveness of our approach. Performance metrics include position and orientation errors, pose estimation times, and trajectory times for assembling spiral brick columns.
 
 ## Conclusion
 The findings confirm the viability of robotic automation in enhancing the construction process of spiral brick columns, promising significant advancements in construction automation.
