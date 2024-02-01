@@ -10,7 +10,7 @@ The motivation behind this research lies in the growing need for automation in t
 # Proposed Approach
 We propose a multi-faceted approach involving:
 
-# Spiral Brick Models: Designing computational models for various spiral configurations.
+Spiral Brick Models: Designing computational models for various spiral configurations.
 Pose Estimation: Developing algorithms for accurate brick positioning.
 Task Execution Framework: Implementing a sequence of robotic actions for efficient brick placement.
 Computational Experiments
