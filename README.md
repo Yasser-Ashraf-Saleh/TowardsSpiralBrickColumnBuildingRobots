@@ -27,7 +27,7 @@ We detail a comprehensive framework involving building modeler, pose estimator, 
 
 * Pose Estimation: Developing algorithms for accurate brick positioning.
 <p align="center">
-<img src="pose.JPG" width="900" height="200" />
+<img src="pose.JPG" width="802" height="200" />
 </p>
   <em>Figure 3:  Example of the ﬁltered point cloud of brick and its estimated pose. </em>
 <!-- <p align="center">
@@ -38,14 +38,14 @@ We detail a comprehensive framework involving building modeler, pose estimator, 
 ## Computational Experiments & Results
 Our simulations conducted in Matlab and CoppeliaSim environments validate the effectiveness of our approach. Performance metrics include position and orientation errors, pose estimation times, and trajectory times for assembling spiral brick columns.
 <p align="center">
-<img src="results.JPG" width="900" height="200" />
+<img src="results.JPG" width="866" height="630" />
 </p>
   <em>Figure 4:  Performance metrics in the assembly of spiral brick columns. </em>
 <!-- <p align="center">
 </p> -->
 
 <p align="center">
-<img src="simulation.JPG" width="900" height="200" />
+<img src="simulation.JPG" width="848" height="181" />
 </p>
   <em>Figure 5:  Examples of the performance while assembling spiral brick columns. </em>
 <!-- <p align="center">
