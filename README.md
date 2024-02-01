@@ -59,3 +59,5 @@ The findings confirm the viability of robotic automation in enhancing the constr
 ## How to Cite
 Please cite this work as follows:
 Ashraf, Y., Abdallah, A., Osman, A., Parque, V., & Assal, S. (Year). Towards Spiral Brick Column Building Robots. Proceedings of the 59th Annual SICE Conference 2020, pp.1448-1451. 
+
+Paper Link: https://arxiv.org/abs/2011.03643
