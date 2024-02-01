@@ -53,4 +53,6 @@ Our simulations conducted in Matlab and CoppeliaSim environments validate the ef
 ## Conclusion
 The findings confirm the viability of robotic automation in enhancing the construction process of spiral brick columns, promising significant advancements in construction automation.
 
-
+## How to Cite
+Please cite this work as follows:
+Ashraf, Y., Abdallah, A., Osman, A., Parque, V., & Assal, S. (Year). Towards Spiral Brick Column Building Robots. Proceedings of the 59th Annual SICE Conference 2020, pp.1448-1451. 
