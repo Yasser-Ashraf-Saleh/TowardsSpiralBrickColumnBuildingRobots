@@ -37,6 +37,7 @@ We detail a comprehensive framework involving building modeler, pose estimator, 
 <p align="center">
 <img src="Figures/Task_execute.gif" />
 </p>
+
 ## Computational Experiments & Results
 Our simulations conducted in Matlab and CoppeliaSim environments validate the effectiveness of our approach. Performance metrics include position and orientation errors, pose estimation times, and trajectory times for assembling spiral brick columns.
 <p align="center">
