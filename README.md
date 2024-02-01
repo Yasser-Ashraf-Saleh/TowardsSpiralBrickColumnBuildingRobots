@@ -7,7 +7,7 @@ This repository presents the research and development of a novel approach for au
 This paper explores the automation in construction,  emphasizing the novel task-level planning for the assembly of spiral brick columns. The motivation behind this research lies in the growing need for automation in the construction industry. Spiral brick columns, known for their aesthetic and structural qualities, present unique challenges for automation. Our study addresses these challenges by proposing a comprehensive framework that leverages robotic manipulation for assembly. We demonstrate a methodological approach that significantly improves construction precision and speed. Utilizing extensive computational simulations and generalized models, we demonstrate the feasibility, effectiveness, and efficiency of our proposed approach, highlighting the potential for using robots in the automated construction of spiral brick columns.
 
 <p align="center">
-<img src="framework.JPG" width="900" height="200" />
+<img src="framework.JPG" width="722" height="445" />
 </p>
   <em>Figure 1:  Basic idea of the general framework in our approach. The manipulator is attached to a gripper and is tasked with assembling a user-deﬁned spiral brick column using incoming bricks from a belt conveyor.</em>
 <!-- <p align="center">
@@ -19,7 +19,7 @@ We detail a comprehensive framework involving building modeler, pose estimator, 
 
 * Spiral Brick Models: Designing computational models for various spiral configurations.
 <p align="center">
-<img src="Models.JPG" width="900" height="200" />
+<img src="Models.JPG" width="857" height="297" />
 </p>
   <em>Figure 2: Spiral brick column models considered in our study. </em>
 <!-- <p align="center">
