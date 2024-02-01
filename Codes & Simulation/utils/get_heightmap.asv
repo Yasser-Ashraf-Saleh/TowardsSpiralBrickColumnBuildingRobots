@@ -1,0 +1,50 @@
+function [color_heightmap, depth_heightmap, surface_pts, color_pts, rsurface_pts, rcolor_pts] = get_heightmap(color_img, depth_img, cam_intrinsics, cam_pose, workspace_limits, heightmap_resolution)
+
+    % Compute heightmap size
+    heightmap_size = round( [ ( workspace_limits(2,2) - workspace_limits(2,1) )/heightmap_resolution, ( workspace_limits(1,2) - workspace_limits(1,1))/heightmap_resolution ] );
+
+    % 3D point cloud from RGB-D images
+    [surface_pts, color_pts] = get_pointcloud(color_img, depth_img, cam_intrinsics);
+    rsurface_pts = surface_pts; rcolor_pts = color_pts;
+
+    [Nsurface_pts, DN]= size(surface_pts);
+    
+    % Transform 3D point cloud from camera coordinates to robot coordinates
+    surface_pts = transpose( cam_pose(1:3,1:3)*transpose(surface_pts)  + repmat( cam_pose(1:3,end), [1, Nsurface_pts ] ) );
+    surface_pts
+    % Sort surface points by z value
+    [sspts, sort_z_ind] = sort(surface_pts(:,end));
+    surface_pts = surface_pts(sort_z_ind, :);
+    color_pts = color_pts(sort_z_ind, :);
+
+    % Filter out surface points outside heightmap boundaries
+    heightmap_valid_ind = and(and(and(and( surface_pts(:,1) >= workspace_limits(1,1) , surface_pts(:,1) < workspace_limits(1,2) ), surface_pts(:,2) >= workspace_limits(2,1) ), surface_pts(:,2) < workspace_limits(2,2) ), surface_pts(:,3) < workspace_limits(3,2) );
+    surface_pts = surface_pts(heightmap_valid_ind, :);
+    color_pts = color_pts(heightmap_valid_ind, :);
+
+    % Create orthographic top-down-view RGB-D heightmaps
+    color_heightmap_r =zeros(heightmap_size);
+    color_heightmap_g =zeros(heightmap_size);
+    color_heightmap_b =zeros(heightmap_size);
+    depth_heightmap = zeros(heightmap_size);
+    
+    heightmap_pix_x = floor( (surface_pts(:,1) - workspace_limits(1,1) )/heightmap_resolution);
+    heightmap_pix_y = floor( (surface_pts(:,2) - workspace_limits(2,1) )/heightmap_resolution);
+    
+    ind = heightmap_size(1)*(heightmap_pix_x -1) + heightmap_pix_y;
+    color_heightmap_r(ind) = color_pts(:,1);
+    color_heightmap_g(ind) = color_pts(:,2);
+    color_heightmap_b(ind) = color_pts(:,3);
+    
+    color_heightmap = zeros([heightmap_size 3]);
+    color_heightmap(:,:,1) = color_heightmap_r;
+    color_heightmap(:,:,2) = color_heightmap_g;
+    color_heightmap(:,:,3) = color_heightmap_b;
+    depth_heightmap(ind) = surface_pts(:,3);
+    
+    z_bottom = workspace_limits(3,1);
+    depth_heightmap = depth_heightmap - z_bottom;
+    depth_heightmap(depth_heightmap < 0) = 0;
+    depth_heightmap(depth_heightmap == -z_bottom) = nan;
+    
+end
